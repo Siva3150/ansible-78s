@@ -12,8 +12,8 @@
       state: started
   - name: Copy file with owner and give permissions
     ansible.builtin.copy:
-      src: 
-      dest: 
+      src: index.html
+      dest: /var/www/html
       owner: root
       group: root
       mode: '0644'
