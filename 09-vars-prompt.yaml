@@ -1,0 +1,13 @@
+- name: enterning values from prompt
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: please enter your USERNAME
+    private: false #user can see what they are enterning
+  - name: PASSWORD
+    prompt: please enter your PASSWORD
+    private: true #user cant see what they are enterning
+  tasks:
+  - name: check variables
+    ansible.builtin.debug:
+    msg: "Usename is : {{USERNAME}}, Password is : {{PASSWORD}}"
